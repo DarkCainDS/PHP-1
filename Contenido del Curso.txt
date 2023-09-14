@@ -1,0 +1,7 @@
+En este curso aprendiste
+El proceso de interacción con el backend de una página web.
+La sintaxis básica de PHP.
+Uso de variables y constantes.
+Tipos de datos y casting.
+Diferentes tipos de operadores: lógicos, aritméticos, relacionales, entre otros.
+Precedencia de operadores.

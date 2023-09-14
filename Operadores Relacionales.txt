@@ -1,0 +1,75 @@
+Operadores relacionales
+Son usados en PHP para la comparación entre valores
+
+Operador	Descripción
+==	Igual a
+===	Idéntico a
+!=	Diferente de
+<>	Diferente de
+!==	No idéntico a
+>	Mayor que
+>=	Mayor o igual que
+<	Menor que
+<=	Menor o igual que
+<=>	Nave espacial
+??	Fusión de null
+
+Los operadores relacionales son aquellos que ayudan a comparar dos valores.
+
+Operadores relacionales en PHP
+En PHP disponemos de estos operadores:
+
+Nombre	Descripción	Operador	Ejemplo	Resultado
+Igual	Compara si 2 variables son iguales en cuanto a sus valores más NO respecto a sus tipos de datos.	==	$a == $b	true si $a es igual a $b
+Idéntico	Compara si 2 variables son iguales respecto a sus valores y tipos de datos.	===	$a === $b	true si $a es igual a $b, y son del mismo tipo.
+Diferente #1	Compara si 2 variables NO son iguales en cuanto a sus valores más NO respecto a sus tipos de datos.	!=	$a != $b	true si $a no es igual a $b
+Diferente #2	Compara si 2 variables NO son iguales en cuanto a sus valores más NO respecto a sus tipos de datos.	<>	$a <> $b	true si $a no es igual a $b
+No idéntico	Compara si 2 variables NO son iguales en cuanto a sus valores o tipos de datos.	!==	$a !== $b	true si $a no es igual a $b, o si no son del mismo tipo.
+Menor que	Evalúa si un número es menor que otro.	<	$a < $b	true si $a es estrictamente menor que $b.
+Mayor que	Evalúa si un número es mayor que otro.	>	$a > $b	true si $a es estrictamente mayor que $b.
+Menor o igual que	Evalúa si un número es menor o igual que otro.	<=	$a <= $b	true si $a es menor o igual que $b.
+Mayor o igual que	Evalúa si un número es mayor o igual que otro.	>=	$a >= $b	true si $a es mayor o igual que $b.
+Operadores especiales
+PHP posee un par de operadores que en la mayoría de lenguajes, si es que en ninguno, no los encuentras y están disponibles a partir de la versión 7. Estas tienen el nombre de Nave espacial y Fusión de null.
+
+Nave espacial (<=>)
+Está representado por el siguiente símbolo: <=>. Evalúa si un número es menor que, igual a o mayor que otro, dando como resultados -1, 0 o 1 respectivamente:
+
+<?php
+# Variables
+$a = 10;
+$b = 5;
+
+echo $a <=> $b; 
+
+echo "\n";
+#----------------------------------
+/*
+Mensaje en consola/navegador:
+1
+*/
+La forma en que <=> evalúa es la siguiente:
+
+Si $a es menor que $b entonces devolverá -1.
+Si $a es igual a $b entonces devolverá 0.
+Si $a es mayor que $b entonces devolverá 1.
+Fusión de null (??)
+Está representado por el siguiente símbolo: ??. La primera variable que SÍ esté definida y no sea null, de izquierda a derecha, es la que será utilizada. Veamos un ejemplo para entender mejor este tipo de operador:
+
+<?php
+# Variables:
+$a = null;
+$b = 40;
+$c = 18;
+
+echo $z ?? $a ?? $b ?? $c; 
+
+echo "\n";
+#----------------------------------
+/*
+Mensaje en consola/navegador:
+40
+*/
+Observamos que $b y $c Sí están definidas y no son null, pero como $b está antes que $c, tomando el orden de izquierda a derecha, esta es la que será impresa en pantalla. Por ello el resultado es 40.
+
+Contribución creada por: Martín Álvarez

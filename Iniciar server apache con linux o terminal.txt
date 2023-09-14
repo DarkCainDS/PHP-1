@@ -1,0 +1,60 @@
+
+
+Otra forma de activar el servicio de apache en WSL es con el comando:
+sudo service apache2 start
+Y si quieren saber si esta activo o no, se puede usar
+sudo service apache2 status
+
+
+
+
+Los archivos PHP pueden ser ejecutados mediante la terminal (línea de comandos) o desde un servidor web como por ejemplo Apache. Esta última opción suele ser la preferida.
+
+Alojando archivos PHP en Apache
+El servidor Apache pone en línea los archivos que estén en una ruta específica. Por ejemplo, para Windows usa la carpeta htdocs y en Linux usa la ruta /var/www/html.
+
+En Windows
+Primero debes ubicar la ruta en donde tus archivos serán hosteados por Apache. Si estás utilizando XAMPP, debes hacer lo siguiente:
+
+Dirígete a tu disco local C o la ruta en donde instalaste XAMPP.
+Abre la carpeta xampp.
+Abre la carpeta htdocs.
+Todos los archivos que estén dentro de htdocs estarán en línea automáticamente gracias a Apache. Esto siempre y cuando hayas iniciado el servidor web (Apache) desde el panel de XAMPP:
+
+Encendiendo Apache desde el panel de XAMPP
+¿Cómo accedo a mis archivos alojados en Apache?
+Abres un navegador y escribes http://localhost o simplemente localhost como dirección web.
+
+Accediendo a nuestros archivos hosteados por Apache desde localhost
+Por defecto te mostrará el resultado de la ejecución del archivo que tenga de nombre index en la carpeta htdocs.
+
+Archivo index dentro de la carpeta htdocs
+Si por ejemplo en vez de tener el nombre de index.php este archivo se llamase pepito.php el resultado en el navegador sería la lista de archivos y carpetas que están dentro de htdocs:
+
+Lista de archivos dentro de la carpeta htdocs desde el navegador
+En Linux (Ubuntu)
+Apache aloja los archivos que estén dentro de la ruta /var/www/html. Para acceder a esta carpeta ejecuta lo siguiente:
+
+cd /var/www/html
+Si deseas eliminar un archivo, debes usar sudo previo al comando de eliminación:
+
+sudo rm index.html
+Cambiando permisos de una carpeta
+Es probable que cuando intentes crear un archivo te nieguen el permiso. Antes que usar el comando sudo como solución es recomendable cambiar los permisos de la carpeta html. Para ello primero tienes que salir de esta carpeta:
+
+cd ..
+Ahora que estás ubicado en la ruta /var/www/ ejecuta el siguiente comando para sobreescribir los permisos de la carpeta html:
+
+sudo chmod 777 html
+Con esto le decimos a nuestro sistema que cualquier persona con cualquier usuario pueda hacer cualquier cosa dentro de la carpeta en cuestión (en este caso la carpeta html). Ahora ya podemos crear archivos dentro de html:
+
+cd html
+touch index.php
+Activando Apache en WSL
+Por defecto, el servidor Apache está encendido en Linux, pero si estás utilizando Windows Subsystem for Linux (WSL) es necesario encenderlo manualmente.
+
+sudo /etc/init.d/apache2 start
+Para esto es recomendable que Apache no esté ejecutándose en tu sistema principal (Windows) pues habría conflicto al utilizar ambos el puerto 80.
+
+Apagar Apache ejecutándose en Windows para encenderlo en WSL
+Contribución creada por: Martín Álvarez.

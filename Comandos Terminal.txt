@@ -1,0 +1,62 @@
+La terminal es una interfaz en la cual podemos ejecutar comandos para que el sistema operativo realice ciertas acciones. Su uso cuando programamos nos brinda muchas ventajas, por ello es necesario perder el miedo o pereza a usarlo.
+
+La terminal está ahí para facilitarnos la vida, no para complicárnosla.
+– RetaxMaster (Profesor en Platzi)
+
+Comandos en la terminal 💻
+Hay una lista larga de comandos; sin embargo, no es necesario que los memorices todos.
+
+Comandos básicos Windows 
+dir: Se usa para listar todo el contenido que hay dentro de una carpeta (directorio)
+type prueba.php : Nos sirve para ver el contenido de un archivo.
+copy con filename.txt: Crea un archivo. Es importante colocarle la extensión al archivo.
+php prueba.php: En el directorio donde esta el archivo como node.
+
+Comandos básicos Linux.
+
+ls: Se usa para listar todo el contenido que hay dentro de una carpeta (directorio). | dir
+ls or dir
+mkdir: Crea una carpeta (directorio).
+mkdir curso-php
+mkdir curso-php2
+cd: Nos permite entrar a una carpeta (directorio).
+cd curso-php
+touch: Crea un archivo. Es importante colocarle la extensión al archivo.
+touch prueba.php
+touch prueba2.php
+cat: Nos sirve para ver el contenido de un archivo.
+cat prueba.php
+rm: Con este comando podemos eliminar un archivo.
+rm prueba2.php
+cd…: Nos permite salir de una carpeta (directorio).
+cd..
+rm -r: Útil para eliminar una carpeta (directorio).
+rm -r curso-php2
+Editando archivos en la terminal
+Existen editores de texto que funcionan en la misma terminal. Entre estas podemos mencionar a Vim, Neovim y Nano, la cual viene por defecto.
+
+Usando Nano como editor
+Para abrir este editor escribimos nano seguido del nombre del archivo a editar. Es importante escribir la extensión de dicho archivo:
+
+nano prueba.php
+A continuación nos abrirá una interfaz en la que podremos escribir.
+
+Es básico saber las siguientes combinaciones de teclas para guardar y salir de nano:
+
+Guardar cambios: Ctrl + O. Luego presionamos la tecla Enter para confirmar las modificaciones.
+Salir del editor: Ctrl + X.
+Si deseas ver lo que escribiste en la terminal, recuerda que puedes usar el comando cat.
+
+¿Cómo usar PHP en la terminal? 🐘
+Para esto, especialmente si estás en Windows, puedes hacer uso de la propia terminal que XAMPP te ofrece:
+Shell de XAMPP
+
+O, si usas alguna terminal Linux, escribe el siguiente comando:
+
+php -a
+Comando para usar php en una terminal de Linux
+Ahora puedes ejecutar código PHP:
+
+echo ""Hola, estoy usando PHP en la terminal :D"";
+Imprimir un mensaje en consola usando PHP
+Finalmente, para dejar de usar PHP en la terminal, ejecutamos la combinación de teclas Ctrl + C.

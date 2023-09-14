@@ -1,0 +1,22 @@
+Adición ⇒ +
+Sustracción ⇒ -
+Multiplicación ⇒ *
+División ⇒ /
+Modulo ⇒ % ⇒ Se usa para conocer el residuo de una división ⇒ $a % $b
+Potenciación ⇒ ** ⇒ $a ** $b
+Identidad ⇒ Sirve para convertir un string a un int o float, según sea el caso ⇒ + ⇒ +$a
+Negación ⇒ Convierte un numero positivo a negativo ⇒ -$a
+
+
+Operadores aritméticos en PHP
+En PHP tenemos los siguientes operadores:
+
+Tipo	Descripción	Operador	Ejemplo
+Adición	Suma dos o más números.	+	$a + $b + $c
+Sustracción	Resta dos o más números.	-	$a - $b - $c
+Multiplicación	Multiplica dos o más números.	*	$a * $b * $c
+División	Divide dos o más números.	/	$a / $b / $c
+Módulo	Devuelve el residuo de una división.	%	$a % $b
+Potenciación	Eleva un número al exponente dado.	**	$a ** $b
+Identidad	Convierte un string a int o float, según sea el caso.	+	+$a
+Negación	Convierte un número a positivo o negativo.	-	-$a
